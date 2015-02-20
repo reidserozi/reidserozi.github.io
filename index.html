@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leaflet SODA API Demo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+
+</head>
+<body>
+
+  <div id="map"></div>
+  <div id="infoBox" class="box">
+
+    <div id="infoBoxTitle">311 Requests Since <span id='startDate'></span>
+    </div>
+
+
+  </div>
+        <div id="FilterBox" class = "box">  
+          <fieldset>
+          <legend>Filter</legend>
+       
+             <label>Issue Type</label>
+             <select id = "SCFIssueType">
+                <option value = "All">All</option>
+                <option value = "Potholes">Potholes</option>
+                <option value = "Graffiti">Potholes</option>
+        
+             </select>
+              <br />
+              <label>Complaint Type</label>
+                <input id="conditions_list" name="conditions_list" type="text" list="conditions" />
+                <datalist  id="conditions">
+                    <option value="All"></option>
+                    <option value="Street Condition"></option>
+                    <option value="Noise - Commercial"></option>
+                    <option value="Benefit Card Replacement"></option>
+          
+                </datalist>         
+       </fieldset>
+    </div>
+  <div id = "blurbBox" class = "box">
+     <p>This example pulls the last 7 days of 311 complaints for the current map view from SCF Open Data using the SODA API.  <a href = "https://github.com/reidserozi/soda-leaflet">Code on Github</a></p>
+  </div>
+  <div id="getData">
+    <a href="https://brigades.opendatanetwork.com/dataset/SeeClickFix-Issues-for-Raleigh/dyik-sdjy"><img src="https://raw.githubusercontent.com/betanyc/getDataButton/master/png/110x32.png"></a>
+
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>  
+  <script src="js/script.js"></script> 
+</body>
+</html>
